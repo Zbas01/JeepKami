@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'frontend-root')));
 
 //CORS
-var whitelist = ['localhost:3000'];
+/* var whitelist = ['*'];
 var corsOptions = {
 	origin: function (origin, callback) {
 		if (whitelist.indexOf(origin) !== -1 || whitelist.indexOf('*')) {
@@ -25,7 +25,7 @@ var corsOptions = {
 		}
 	}
 };
-app.use(cors(corsOptions));
+app.use(cors(corsOptions)); */
 
 //Unica ruta
 app.use('/', require('./routes/index'));
