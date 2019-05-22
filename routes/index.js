@@ -5,10 +5,10 @@ const mysql = require('mysql2');
 //Conexion mysql
 var con = mysql.createConnection(config);
 
-con.connect(function (err) {
+/* con.connect(function (err) {
 	if (err) throw err;
 	console.log(`Connected to '${config.user}@${config.host} to the database '${config.database}'`);
-});
+}); */
 
 router.get('/highscore', function (req, res, next) {
 
