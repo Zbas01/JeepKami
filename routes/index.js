@@ -3,7 +3,7 @@ const config = require('../config');
 const mysql = require('mysql2');
 
 //Conexion mysql
-var con = mysql.createConnection(config);
+var con = null;//mysql.createConnection(config);
 
 /* con.connect(function (err) {
 	if (err) throw err;
