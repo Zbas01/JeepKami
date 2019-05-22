@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Proyecto</title>
+	<script type="text/javascript" src="/js/jquery-3.3.1.min.js"> </script>
+	<script src="/js/three.min.js"></script>
+	<script type="text/javascript" src="/js/Inflate.min.js"></script>
+	<script type="text/javascript" src="/js/FBXLoader.js"></script>
+	<script type="text/javascript" src="/js/MTLLoader.js"></script>
+	<script type="text/javascript" src="/js/OBJLoader.js"></script>
+	<script type="text/javascript" src="/js/javascript.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.js"> </script>
+
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/bootstrap-grid.css">
+	<link rel="stylesheet" href="/css/Datos_Colores.css">
+	<link rel="stylesheet" href="/css/blackmagic.css">
+
+
+	<style>
+		.btns {
+
+			background: none !important;
+			border: none !important;
+			color: blue;
+
+		}
+
+		.btns:hover {
+			font-size: 30px;
+			background: none !important;
+			border: none !important;
+			color: blue;
+
+		}
+
+		h1 {
+			font-family: Tahoma;
+			color: white;
+			font-size: 30px;
+		}
+
+		h4 {
+			font-family: Tahoma;
+			color: red;
+			font-size: 60px;
+		}
+	</style>
+
+	<title></title>
+</head>
+
+<body onload="webGLStart();" class="center">
+
+	<div class="background">
+		<div class="back-back"></div>
+		<div class="back-front"></div>
+		<div class="back-cover"></div>
+	</div>
+
+	<div id="canvas" class="text-center canvas">
+	</div>
+
+
+	<section id="configuracion" class="modal fade" role="dialog">
+		<div class="camu abs-center">
+			<div class="modal-header">
+				<h4 class="modal-title">Configuración</h4>
+			</div>
+			<div class="modal-body">
+				<label>Color de terreno:</label>
+				<div class="row">
+					<div class="col-6">
+						<h1>Verde</h1>
+						<input type="radio" name="color">
+					</div>
+					<div class="col-6">
+						<h1>Gris</h1>
+						<input type="radio" name="color">
+					</div>
+				</div>
+				<label>Seleccionar musica:</label>
+				<div class="row">
+					<div class="col-6">
+						<h1>Tetris</h1>
+						<input type="radio" name="Musica" value="">
+					</div>
+					<div class="col-6">
+						<h1>Aventura</h1>
+						<input type="radio" name="Musica" value="">
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<a href="/" class="btn btn-primary">Salir del juego</a>
+				<button class="btn btn-secondary" data-dismiss="modal">Continuar</button>
+			</div>
+		</div>
+	</section>
+
+	<a href="/" class="btn btn-primary">Salir del juego</a>
+	<button class="btn btn-secondary" data-toggle="modal" data-target="#configuracion">Configuración</button>
+
+</body>
+
+</html>

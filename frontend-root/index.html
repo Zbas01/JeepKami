@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script type="text/javascript" src="/js/jquery-3.3.1.min.js"> </script>
+	<script type="text/javascript" src="/js/bootstrap.js"> </script>
+
+	<link rel="stylesheet" href="/css/Datos_Colores.css">
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/bootstrap-grid.css">
+	<link rel="stylesheet" href="/css/blackmagic.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+	<title>Menú</title>
+</head>
+
+<body>
+	<div class="background">
+		<div class="back-back"></div>
+		<div class="back-mid"></div>
+		<div class="back-front"></div>
+	</div>
+
+	<section class="abs-center">
+		<a class="btn btn-primary" href="Juego.html">Nueva Partida</a>
+		<button class="btn btn-primary" data-toggle="modal" data-target="#Opciones">&#9660;</button>
+	</section>
+
+	<section id="Opciones" class="modal fade" role="dialog">
+		<div class="camu abs-center">
+			<button class="btn btn-secondary" data-toggle="modal" data-target="#puntuaciones">Puntuaciones</button>
+			<button class="btn btn-secondary" data-toggle="modal" data-target="#configuracion">Configuración</button>
+			<hr>
+			<button class="btn btn-secondary" data-dismiss="modal">Volver</button>
+		</div>
+	</section>
+
+	<section id="puntuaciones" class="modal fade" role="dialog">
+		<!-- Modal content-->
+		<div class="camu abs-center">
+			<div class="modal-header">
+				<h4 class="center">Mejores Puntuaciónes</h4>
+				<table>
+					<thead>
+						<tr>
+							<th class="well">Nombre</th>
+							<br>
+							<th class="well">Puntuacion</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="well">Esaú</td>
+							<td class="well">99999</td>
+						</tr>
+					</tbody>
+				</table>
+				<button class="btn btn-secondary" data-dismiss="modal">Regresar</button>
+			</div>
+		</div>
+	</section>
+
+	<section id="configuracion" class="modal fade" role="dialog">
+		<div class="camu abs-center">
+			<div class="modal-header">
+				<h4 class="modal-title">Configuración</h4>
+			</div>
+			<div class="modal-body">
+				<label>Color de terreno:</label>
+				<div class="row">
+					<div class="col-6">
+						<h1>Verde</h1>
+						<input type="radio" name="color">
+					</div>
+					<div class="col-6">
+						<h1>Gris</h1>
+						<input type="radio" name="color">
+					</div>
+				</div>
+				<label>Seleccionar musica:</label>
+				<div class="row">
+					<div class="col-6">
+						<h1>Tetris</h1>
+						<input type="radio" name="Musica" value="">
+					</div>
+					<div class="col-6">
+						<h1>Aventura</h1>
+						<input type="radio" name="Musica" value="">
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" data-dismiss="modal">Regresar</button>
+			</div>
+		</div>
+	</section>
+</body>
+
+</html>
