@@ -421,7 +421,7 @@ function starEscena() {
 
 
 
-	loadOBJWithMTL("assets/", "Jeep_Renegade_2016.obj", "Jeep_Renegade_2016.mtl", (object) => {
+	loadOBJWithMTL("/assets/", "Jeep_Renegade_2016.obj", "Jeep_Renegade_2016.mtl", (object) => {
 
 		object.scale.z = 2;
 		object.scale.y = 2;

@@ -1,6 +1,6 @@
 module.exports = {
-	host: "localhost",
-	user: "dev",
-	password: "piupiu123",
-	database: 'MI'
+	host: "localhost:51601",
+	user: "azure",
+	password: "6#vWHD_$",
+	database: 'mi'
 };
