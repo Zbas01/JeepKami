@@ -12,8 +12,11 @@ con.connect(function (err) {
 
 router.get('/highscore', function (req, res, next) {
 
+	var players = req.query.players || 0;
+	console.log(players);
+
 	//Hace el request a la BD
-	con.query(`CALL ver(1);`,
+	con.query(`CALL ver(${players});`,
 		(err, results, fields) => {
 			if (err) {
 				console.log(err);
@@ -27,12 +30,12 @@ router.get('/highscore', function (req, res, next) {
 router.post('/highscore', function (req, res, next) {
 
 	//Carga los datos del body
-	var { score, name } = req.body;
+	var { players, score, name } = req.body;
 	//Verifica si estan todos
-	if (score == undefined && name == undefined)
-		return res.status(418).send({data: req.body, msg:"Incomplete data"});
+	if (score == undefined || name == undefined || players == undefined)
+		return res.status(418).send({ data: req.body, msg: "Incomplete data" });
 
-	con.query(`CALL agregar(${score},"${name}", 1);`,
+	con.query(`CALL agregar(${score},"${name}", ${players});`,
 		(err, results, fields) => {
 			if (err) {
 				console.log(err);
