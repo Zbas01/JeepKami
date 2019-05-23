@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Proyecto</title>
+
+
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"> </script>  
+
+  
+  <script src="js/three.min.js"></script>
+  <script type="text/javascript" src="js/Inflate.min.js"></script>
+
+  <script type="text/javascript" src="js/FBXLoader.js"></script>  
+  <script type="text/javascript" src="js/MTLLoader.js"></script>
+
+  <script type="text/javascript" src="js/OBJLoader.js"></script>
+
+
+	<script src="js/javascript1.js">
+   
+  </script>
+    <script type="text/javascript" src="js/bootstrap.js"> </script>
+      <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/Datos_Colores.css">
+  <link rel="stylesheet" href="css/blackmagic.css">
+ 
+
+<style>
+      .btns{
+
+      background: none !important; border:none !important; color: blue;
+
+    }
+
+    .btns:hover{
+        font-size: 30px;
+      background: none !important; border:none !important; color: blue;
+
+    }
+
+    h1{
+        font-family: Tahoma;
+  color:white;
+  font-size: 30px;
+}
+
+    h4{
+        font-family: Tahoma;
+  color:red;
+  font-size: 60px;
+}
+
+  </style>
+
+	<title></title>
+</head>
+
+<body onload="webGLStart();" class="center">
+ 
+
+	<div class="background">
+		<div class="back-back"></div>
+		<div class="back-front"></div>
+		<div class="back-cover"></div>
+	</div>
+
+   Nombre del Tanque:<input type="text" id="nombre" required autofocus>
+
+ <button onclick= "nombre()" >Enlistame </button> 
+
+<aside>
+  
+  <button onclick= "castelvania()" >Castelvania</button> 
+  <button onclick= "megaman()" >Megaman</button> 
+   <button onclick= "tetris()" >Tetris</button> 
+ 
+</aside>
+  
+	<div id="canvas" align="center">
+
+<audio  loop>
+  <source loop autoplay src="sound/Meg.ogg" type="audio/ogg">
+  <source loop  autoplay src="sound/Meg.mp3" type="audio/mpeg">
+</audio> 
+
+
+<audio  loop>
+
+   <source loop autoplay src="sound/Tec.ogg" type="audio/ogg">
+  <source loop  autoplay src="sound/Tec.mp3" type="audio/mpeg">
+</audio> 
+
+
+<audio loop>
+
+   <source loop autoplay src="sound/Cast.ogg" type="audio/ogg">
+  <source loop  autoplay src="sound/Cast.mp3" type="audio/mpeg">
+</audio> 
+
+
+<br>
+  </div>
+
+  <center>
+
+
+<div   id="Opciones" class="modal fade" role="dialog"> 
+
+   <div class="camu">
+    <a href="Juego.html"><h2>Nuevo Juego</h2></a>
+<br>
+
+    <a href="Menu.html"><h2>Volve al menu principal</h2></a>
+<br>
+
+
+<button type="button" class="btns" data-toggle="modal" data-target="#configuraciones"><h2>Configuraciones</h2></button>
+  <div id="configuraciones" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="naran">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><h1>Menu de configuracion</h1></h4>
+      </div>
+      <div class="modal-body">
+         <h1>Color de terreno:</h1>
+         <br>
+         <h1>verde</h1>         
+        <input type="radio" name="color">
+
+                 <br>
+          <h1>blanco</h1>
+        <input type="radio" name="color">
+        <br>
+     <h1>Seleccionar musica:</h1>
+     <br>
+     <h1>Tetris</h1>
+     <input type="radio" name="Musica" value="">
+     <br>
+     <h1>aventura</h1>
+     <input type="radio" name="Musica" value="">
+
+              
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+</center>
+
+</body>
+
+
+</html>
