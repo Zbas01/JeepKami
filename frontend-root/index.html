@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="/css/bootstrap.css">
 	<link rel="stylesheet" href="/css/bootstrap-grid.css">
 	<link rel="stylesheet" href="/css/blackmagic.css">
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Faster+One|Source+Sans+Pro&display=swap" rel="stylesheet">
 	<title>Menú</title>
 </head>
 
@@ -21,14 +21,15 @@
 	</div>
 
 	<section class="abs-center">
-		<a class="btn btn-primary" href="Juego.html">Nueva Partida</a>
+		<!-- <a class="btn btn-primary" href="Juego.html">Nueva Partida</a> -->
+		<button class="btn btn-secondary" data-toggle="modal" data-target="#nuevoJuego">Nueva Partida</button>
 		<button class="btn btn-primary" data-toggle="modal" data-target="#Opciones">&#9660;</button>
 	</section>
 
 	<section id="Opciones" class="modal fade" role="dialog">
 		<div class="camu abs-center">
-			<button class="btn btn-secondary" data-toggle="modal" data-target="#puntuaciones">Puntuaciones</button>
-			<button class="btn btn-secondary" data-toggle="modal" data-target="#configuracion">Configuración</button>
+			<button class="btn btn-primary" data-toggle="modal" data-target="#puntuaciones">Puntuaciones</button>
+			<button class="btn btn-primary" data-toggle="modal" data-target="#configuracion">Configuración</button>
 			<hr>
 			<button class="btn btn-secondary" data-dismiss="modal">Volver</button>
 		</div>
@@ -38,22 +39,62 @@
 		<!-- Modal content-->
 		<div class="camu abs-center">
 			<div class="modal-header">
-				<h4 class="center">Mejores Puntuaciónes</h4>
-				<table>
-					<thead>
-						<tr>
-							<th class="well">Nombre</th>
-							<br>
-							<th class="well">Puntuacion</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="well">Esaú</td>
-							<td class="well">99999</td>
-						</tr>
-					</tbody>
-				</table>
+				<h4 class="text-center text-light">Mejores Puntuaciónes</h4>
+				<div class="row">
+					<div class="col-4"><a class="btn btn-secondary btn-auto" href="javascript:void(0)">Normal</a></div>
+					<div class="col-4"><a class="btn btn-secondary btn-auto" href="javascript:void(0)">Dificil</a></div>
+					<div class="col-4"><a class="btn btn-secondary btn-auto" href="javascript:void(0)">Imposible</a>
+					</div>
+				</div>
+				<div class="row score-header">
+					<div class="col-2">Lugar</div>
+					<div class="col-6">Nombre</div>
+					<div class="col-4">Puntuación</div>
+				</div>
+				<div id="score-items">
+					<div class="row score-item">
+						<div class="col-2">0</div>
+						<div class="col-6">Esaú</div>
+						<div class="col-4">99999</div>
+					</div>
+					<div class="row score-item">
+						<div class="col-2">2</div>
+						<div class="col-6">Esaú</div>
+						<div class="col-4">99999</div>
+					</div>
+					<div class="row score-item empty">
+						<div class="col-2">3</div>
+						<div class="col-10">&nbsp;</div>
+					</div>
+					<div class="row score-item empty">
+						<div class="col-2">4</div>
+						<div class="col-10">&nbsp;</div>
+					</div>
+					<div class="row score-item empty">
+						<div class="col-2">5</div>
+						<div class="col-10">&nbsp;</div>
+					</div>
+					<div class="row score-item empty">
+						<div class="col-2">6</div>
+						<div class="col-10">&nbsp;</div>
+					</div>
+					<div class="row score-item empty">
+						<div class="col-2">7</div>
+						<div class="col-10">&nbsp;</div>
+					</div>
+					<div class="row score-item empty">
+						<div class="col-2">8</div>
+						<div class="col-10">&nbsp;</div>
+					</div>
+					<div class="row score-item empty">
+						<div class="col-2">9</div>
+						<div class="col-10">&nbsp;</div>
+					</div>
+					<div class="row score-item empty">
+						<div class="col-2">10</div>
+						<div class="col-10">&nbsp;</div>
+					</div>
+				</div>
 				<button class="btn btn-secondary" data-dismiss="modal">Regresar</button>
 			</div>
 		</div>
@@ -91,6 +132,17 @@
 			<div class="modal-footer">
 				<button class="btn btn-secondary" data-dismiss="modal">Regresar</button>
 			</div>
+		</div>
+	</section>
+
+	<section id="nuevoJuego" class="modal fade" role="dialog">
+		<div class="camu abs-center">
+			<h4 class="text-center text-light">Nueva partida</h4>
+			<a class="btn btn-primary" href="/Juego.html">Normal</a>
+			<a class="btn btn-primary" href="/Juego1.html">Dificil</a>
+			<a class="btn btn-primary" href="/Juego2.html">Imposible</a>
+			<hr>
+			<button class="btn btn-secondary" data-dismiss="modal">Volver</button>
 		</div>
 	</section>
 </body>

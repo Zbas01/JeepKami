@@ -1,123 +1,144 @@
 .btns {
-  background: none !important;
-  border: none !important;
-  color: blue;
+	background: none !important;
+	border: none !important;
+	color: blue;
 }
 .btns:hover {
-  font-size: 30px;
-  background: none !important;
-  border: none !important;
-  color: blue;
+	font-size: 30px;
+	background: none !important;
+	border: none !important;
+	color: blue;
 }
 h1 {
-  font-family: Tahoma;
-  color: white;
-  font-size: 30px;
+	font-family: Tahoma;
+	color: white;
+	font-size: 30px;
 }
 h4 {
-  font-family: Tahoma;
-  color: red;
-  font-size: 60px;
+	font-family: 'Faster One', cursive;
+	color: rgb(255, 234, 177);
+	font-size: 40px;
+	font-family: "Source Sans Pro", sans-serif;
 }
 
 .btn {
-  border: 1px solid;
-  border-radius: 3px 16px 3px 16px;
-  min-width: 32em;
-  padding: 12px;
-  text-decoration: none;
-  width: 100%;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  font-size: 1.75rem;
-  font-family: 'Source Sans Pro', sans-serif;
+	border: 1px solid;
+	border-radius: 3px 16px 3px 16px;
+	padding: 12px;
+	text-decoration: none;
+	width: 100%;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	font-size: 1.75rem;
+	font-family: "Source Sans Pro", sans-serif;
+}
+.btn:not(.btn-auto){
+	min-width: 32em;
 }
 
-.btn-primary {
-  border-color: black;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: rgb(245, 121, 20);
+.btn-primary,
+.score-item {
+	border-color: black;
+	background-color: rgba(0, 0, 0, 0.6);
+	color: rgb(245, 121, 20);
 }
-.btn-primary:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-  color: rgb(255, 234, 177);
+.btn-primary:hover,
+.score-header {
+	background-color: rgba(0, 0, 0, 0.7);
+	color: rgb(255, 234, 177);
+}
+
+.score-item,
+.score-header {
+	padding: 12px;
+	font-family: "Source Sans Pro", sans-serif;
+	border: 1px solid rgba(255, 145, 0, 0.534);
+	border-bottom-style: none;
+}
+.score-header {
+	border-radius: 16px 3px 0px 0px;
+}
+.score-item:nth-last-of-type(1) {
+	border-radius: 0px 0px 16px 3px;
+	margin-bottom: 2rem;
+	border-bottom-style: solid;
 }
 
 .btn-secondary {
-  border-color: black;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: rgb(245, 121, 20);
+	border-color: black;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: rgb(245, 121, 20);
 }
 .btn-secondary:hover {
-  background-color: rgba(0, 0, 0, 1);
-  color: rgb(255, 234, 177);
+	background-color: rgba(0, 0, 0, 1);
+	color: rgb(255, 234, 177);
 }
 
 .background > * {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100%;
 }
 .back-back {
-  z-index: -4;
-  background-image: url("/images/palms.gif");
+	z-index: -4;
+	background-image: url("/images/palms.gif");
 }
 .back-mid {
-  z-index: -3;
-  background-image: url("/images/tank-fore.png");
+	z-index: -3;
+	background-image: url("/images/tank-fore.png");
 }
 .back-front {
-  z-index: -2;
-  opacity: 0.15;
-  background-image: url("/images/explosion.gif");
+	z-index: -2;
+	opacity: 0.15;
+	background-image: url("/images/explosion.gif");
 }
 .back-cover {
 	z-index: -1;
 	opacity: 0.9;
 	background-color: black;
-  }
+}
 
 .abs-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 hr {
-  border-top: 4px solid rgba(0, 0, 0, 0.8);
-  border-radius: 2px;
+	border-top: 4px solid rgba(0, 0, 0, 0.8);
+	border-radius: 2px;
 }
 
 @keyframes displace {
-  0% {
-    background-position: 0px 0px;
-  }
-  25% {
-    background-position: 500px 500px;
-  }
-  50% {
-    background-position: 0px 500px;
-  }
-  75% {
-    background-position: 500px 0px;
-  }
+	0% {
+		background-position: 0px 0px;
+	}
+	25% {
+		background-position: 500px 500px;
+	}
+	50% {
+		background-position: 0px 500px;
+	}
+	75% {
+		background-position: 500px 0px;
+	}
 }
 
 .camu {
-  animation: displace 240s ease-in-out infinite;
-  background-image: url("/images/geocamo1.png");
-  background-size: 60%;
-  padding: 50px;
-  padding-bottom: 30px;
-  background-color: rgba(255, 255, 255, 0.6);
-  border: rgb(83, 94, 107) solid;
-  border-width: 12px 6px 24px 6px;
-  border-radius: 4px 16px;
+	animation: displace 240s ease-in-out infinite;
+	background-image: url("/images/geocamo1.png");
+	background-size: 60%;
+	padding: 50px;
+	padding-bottom: 30px;
+	background-color: rgba(255, 255, 255, 0.6);
+	border: rgb(83, 94, 107) solid;
+	border-width: 12px 6px 24px 6px;
+	border-radius: 4px 16px;
 }
